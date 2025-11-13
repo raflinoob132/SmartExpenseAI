@@ -9,12 +9,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/raflinoob132/SmartExpenseAI/internal/models"
+	"SmartExpenseAI/internal/models"
 )
 
 type OpenRouterRequest struct {
-	Model         string      `json:"model"`
-	Messages      []Message   `json:"messages"`
+	Model          string      `json:"model"`
+	Messages       []Message   `json:"messages"`
 	ResponseFormat interface{} `json:"response_format,omitempty"`
 }
 
@@ -30,7 +30,6 @@ type OpenRouterResponse struct {
 type Choice struct {
 	Message Message `json:"message"`
 }
-
 
 func ParseExpense(text string) (models.Expense, error) {
 	var expense models.Expense
@@ -154,4 +153,3 @@ func ParseExpense(text string) (models.Expense, error) {
 
 	return expense, nil
 }
-

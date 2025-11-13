@@ -10,8 +10,8 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/gofiber/fiber/v2"
 
-	"github.com/raflinoob132/SmartExpenseAI/internal/database"
-	"github.com/raflinoob132/SmartExpenseAI/internal/services"
+	"SmartExpenseAI/internal/database"
+	"SmartExpenseAI/internal/services"
 )
 
 // Global variables to hold bot and allowed user ID

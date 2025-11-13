@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"time"
 
-	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/go-co-op/gocron"
+	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 
-	"github.com/raflinoob132/SmartExpenseAI/internal/database"
-	"github.com/raflinoob132/SmartExpenseAI/internal/models"
+	"SmartExpenseAI/internal/database"
+	"SmartExpenseAI/internal/models"
 )
 
 // GenerateWeeklyRecap generates a weekly recap of expenses and sends it to the specified chat
@@ -44,12 +44,12 @@ func GenerateWeeklyRecap(bot *tgbotapi.BotAPI, chatID int64) {
 
 	// Format the recap message
 	recapText := "🧾 Rekap Mingguan:\n"
-	
+
 	// Add each category with its total
 	for category, amount := range categoryTotals {
 		recapText += fmt.Sprintf("- %s: Rp%s\n", category, formatCurrency(amount))
 	}
-	
+
 	// Add total amount
 	recapText += fmt.Sprintf("Total: Rp%s", formatCurrency(totalAmount))
 
@@ -141,15 +141,15 @@ func GenerateMonthlyRecap(bot *tgbotapi.BotAPI, chatID int64) {
 func formatCurrency(amount float64) string {
 	// Convert to integer to avoid decimal places
 	amt := int64(amount)
-	
+
 	// Convert to string
 	s := strconv.FormatInt(amt, 10)
-	
+
 	// Add thousands separators from right to left
 	for i := len(s) - 3; i > 0; i -= 3 {
 		s = s[:i] + "." + s[i:]
 	}
-	
+
 	return s
 }
 
