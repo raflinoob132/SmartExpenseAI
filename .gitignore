@@ -1,0 +1,21 @@
+# Environment variables
+.env
+
+# Go build artifacts
+bin/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log files
+*.log
+
+# Dependency management
+vendor/

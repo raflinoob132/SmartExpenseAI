@@ -1,0 +1,22 @@
+services:
+- type: web
+  name: smartexpenseai
+  env: go
+  region: singapore  # atau ganti ke region terdekatmu
+  buildCommand: |
+    go mod download &&
+    go build -o bin/server ./cmd/main.go
+  startCommand: ./bin/server
+  envVars:
+    - key: TELEGRAM_BOT_TOKEN
+      sync: false  # Harus diisi manual di dashboard Render
+    - key: TELEGRAM_USER_ID
+      sync: false  # Harus diisi manual di dashboard Render
+    - key: DATABASE_URL
+      sync: false  # Harus diisi manual di dashboard Render
+    - key: OPENROUTER_API_KEY
+      sync: false  # Harus diisi manual di dashboard Render
+  healthCheckPath: /setup-webhook  # Ganti dengan path yang sesuai jika ada endpoint health check
+  disk:  # Jika dibutuhkan simpan data lokal
+    name: smartexpenseai-data
+    sizeGB: 1
