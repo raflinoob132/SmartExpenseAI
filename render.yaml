@@ -4,10 +4,8 @@ services:
     env: go
     region: singapore
     buildCommand: |
-      mkdir -p bin &&
-      cd cmd &&
-      go mod tidy &&
-      go build -o ../bin/server main.go
+      go mod download &&
+      go build -o bin/server ./cmd/main.go
     startCommand: ./bin/server
     envVars:
       - key: TELEGRAM_BOT_TOKEN
