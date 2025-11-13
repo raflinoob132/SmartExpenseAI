@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"SmartExpenseAI/internal/models"
+	"github.com/raflinoob132/SmartExpenseAI/internal/models"
 )
 
 type OpenRouterRequest struct {

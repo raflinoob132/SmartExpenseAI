@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"SmartExpenseAI/internal/models"
+	"github.com/raflinoob132/SmartExpenseAI/internal/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

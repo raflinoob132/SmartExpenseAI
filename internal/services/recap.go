@@ -9,8 +9,8 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/go-co-op/gocron"
 
-	"SmartExpenseAI/internal/database"
-	"SmartExpenseAI/internal/models"
+	"github.com/raflinoob132/SmartExpenseAI/internal/database"
+	"github.com/raflinoob132/SmartExpenseAI/internal/models"
 )
 
 // GenerateWeeklyRecap generates a weekly recap of expenses and sends it to the specified chat

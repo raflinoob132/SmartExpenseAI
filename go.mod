@@ -1,4 +1,4 @@
-module SmartExpenseAI
+module github.com/raflinoob132/SmartExpenseAI
 
 go 1.21
 

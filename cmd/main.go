@@ -9,9 +9,9 @@ import (
 	fiber "github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 
-	"SmartExpenseAI/internal/database"
-	"SmartExpenseAI/internal/routes"
-	"SmartExpenseAI/internal/services"
+	"github.com/raflinoob132/SmartExpenseAI/internal/database"
+	"github.com/raflinoob132/SmartExpenseAI/internal/routes"
+	"github.com/raflinoob132/SmartExpenseAI/internal/services"
 )
 
 func main() {
